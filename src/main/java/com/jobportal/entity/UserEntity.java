@@ -1,6 +1,5 @@
 package com.jobportal.entity;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size; 
@@ -28,10 +27,7 @@ public class UserEntity {
     @Column(length=150)
     private String skills;
     @ElementCollection
-private List<Long> followers = new ArrayList<>();
 
-@ElementCollection
-private List<Long> following = new ArrayList<>();
     //getter and setter
 
     //Id method
