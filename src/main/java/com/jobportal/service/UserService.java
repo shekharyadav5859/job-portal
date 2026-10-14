@@ -36,8 +36,8 @@ public UserEntity updateUser(Long id, UserEntity user) {
             .orElseThrow(() -> new RuntimeException("User not found"));
 
     existingUser.setName(user.getName());
-    existingUser.setEmail(user.getEmail());
-    existingUser.setPassword(user.getPassword());
+    // existingUser.setEmail(user.getEmail());
+    // existingUser.setPassword(user.getPassword());
     existingUser.setPhona(user.getPhona());
     existingUser.setRole(user.getRole());
     existingUser.setLocation(user.getLocation());
