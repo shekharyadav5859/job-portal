@@ -14,24 +14,24 @@ public class aController {
         this.aServ = aServ;
     }
 
-    // Candidate applies 
+    // CandidatApplies 
     @PostMapping
     public aEntity apply(@RequestBody aEntity application) {
         return aServ.apply(application);
     }
 
-    // Get all applications
+    // GetAllApplications
     @GetMapping
     public List<aEntity> getAllApplications() {
         return aServ.getAllApplications();
     }
 
-    // Get application by ID
+    // GetApplicationByID
     @GetMapping("/{id}")
     public aEntity getApplicationById(@PathVariable Long id) {
         return aServ.getApplicationById(id);
     }
-//compan  replay
+//companReplay
     @PutMapping("/{id}/reply")
 public aEntity replyToApplication(
         @PathVariable Long id,

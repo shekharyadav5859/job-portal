@@ -18,13 +18,13 @@ public class pController {
         this.pServ = pServ;
     }
 
-    // Get All Posts
+    // GetAllPosts
     @GetMapping("/get")
     public List<pEntity> getAllPost() {
         return pServ.getAllPosts();
     }
 
-    // Get Post By ID
+    // GetPostByID
     @GetMapping("/get/{id}")
     public Optional<pEntity> getById(@PathVariable Long id) {
         return pServ.getPostById(id);
@@ -35,7 +35,7 @@ public pEntity PostData(@RequestBody pEntity post) {
     return pServ.PostSave(post);
 }
 
-    // Delete Post By ID
+    // DeletePostByID
     @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable Long id) {
         pServ.deletePost(id);

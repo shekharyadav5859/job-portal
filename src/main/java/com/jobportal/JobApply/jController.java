@@ -32,7 +32,7 @@ public jEntity save(@RequestBody jEntity j){
         return jserv.get();
     }
 
-// DELETE: Delete job by ID
+// DELETE
 @DeleteMapping("/delet/{id}")
 public String delet(@PathVariable Long id) {
     jserv.delet(id);
@@ -41,7 +41,7 @@ public String delet(@PathVariable Long id) {
 }
 
 
-// PUT: Update job by ID
+// PUT
 @PutMapping ("/put/{id}")
 public jEntity put(@RequestBody jEntity j, @PathVariable Long id) {
     return jserv.put(j, id);
