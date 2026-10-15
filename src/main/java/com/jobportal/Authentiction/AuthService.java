@@ -67,6 +67,8 @@ public class AuthService {
     }
 
     //LoginSystem 
-    
+    public void deleteUser(Long id) {
+    aRepo.deleteById(id);
+}
     
 }

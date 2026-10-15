@@ -107,8 +107,12 @@ public String login(@RequestBody LoginRequest request) {
     return "Invalid email or password";
 }
 
-
-
+//deleted
+@DeleteMapping("/users/{id}")
+public String deleteUser(@PathVariable Long id) {
+    authService.deleteUser(id);
+    return "User deleted successfully";
+}
  
 
 }
